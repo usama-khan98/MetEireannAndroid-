@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--NAME-->
+<!--STUDENT NUMBER-->
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mywarnings_relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:padding="5sp"
+        android:id="@+id/mywarnings_description"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:text="Tap a subscription arrow button to edit or delete it"
+        android:textSize="15sp"
+        android:gravity="left"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentLeft="true"
+        />
+        <TextView
+            android:padding="5sp"
+            android:id="@+id/mywarnings_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Warnings"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/mywarnings_description"
+            />
+
+    <TextView
+        android:padding="5sp"
+        android:id="@+id/mywarnings_list_headers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\tArea\t\t\t\t\t\t\t\t\t\t\t\tLevel\t\t\tType"
+        android:textSize="15sp"
+        android:gravity="left"
+        android:layout_below="@id/mywarnings_title"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview_mywarnings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mywarnings_list_headers"
+        android:background="@color/colorAccent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/add_new_mywarning_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycleview_mywarnings"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:text="ADD NEW MY WARNING"
+        android:layout_margin="5sp"
+        android:textSize="15dp">
+    </Button>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_relative_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/outlook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+    <TextView
+        android:padding="5sp"
+        android:id="@+id/home_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NORTH CITY"
+        android:textSize="15sp"
+        android:gravity="left"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
+        android:layout_alignParentLeft="true"
+        />
+    <TextView
+        android:padding="5sp"
+        android:id="@+id/home_title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OUTLOOK"
+        android:textSize="15sp"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
+
+        />
+    </RelativeLayout>
+    <TextView
+        android:padding="5sp"
+        android:id="@+id/list_headers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\t\t\tDay\t\t\t\t\tWeather\t\t\t\t\t\t\t\tC\t\t\t\tWind km/h\t\t\tWarning\t"
+        android:textSize="15sp"
+        android:gravity="right"
+        android:layout_below="@id/outlook"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_headers"
+        android:background="@color/colorAccent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/my_warnings_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycleview_weather"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:text="My Warnings "
+        android:layout_margin="5sp"
+        android:textSize="15dp">
+    </Button>
+
+
+
+</RelativeLayout>

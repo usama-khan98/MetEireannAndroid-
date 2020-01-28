@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--NAME-->
+<!--STUDENT NUMBER-->
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_mywarning_relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/edit_warning_header"
+        android:text="Edit Warning Subscription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent">
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/edit_area_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/edit_warning_header">
+        <TextView
+            android:padding="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Area"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignParentLeft="true"
+            />
+
+        <Spinner
+            android:padding="5sp"
+            android:id="@+id/select_area_spinner_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select area"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimaryDark"
+
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_level_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/edit_area_relative">
+        <TextView
+            android:padding="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignParentLeft="true"
+            />
+
+        <Spinner
+            android:padding="5sp"
+            android:id="@+id/select_level_spinner_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimaryDark"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/edit_type_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/edit_level_relative">
+        <TextView
+            android:padding="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textSize="15sp"
+            android:gravity="left"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_alignParentLeft="true"
+            />
+
+        <Spinner
+            android:padding="5sp"
+            android:id="@+id/select_type_spinner_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimaryDark"
+
+            />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/edit_warning_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_type_relative"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:text="save"
+        android:layout_margin="5sp"
+        android:textSize="15dp">
+    </Button>
+
+    <Button
+        android:id="@+id/delete_warning_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_warning_btn"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:text="DELETE"
+        android:layout_margin="5sp"
+        android:textSize="15dp">
+    </Button>
+
+    <Button
+        android:id="@+id/final_cancel_edit_warning_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/delete_warning_btn"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:text="CANCEL"
+        android:layout_margin="5sp"
+        android:textSize="15dp">
+    </Button>
+
+
+</RelativeLayout>

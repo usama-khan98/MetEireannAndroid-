@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--NAME-->
+<!--STUDENT NUMBER-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50sp"
+    android:layout_marginBottom="2sp"
+    android:id="@+id/weather_items"
+    >
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="75sp"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/weather"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="3sp"
+        android:layout_alignParentStart="true"
+        android:text="Day_Name" />
+
+    <ImageView
+        android:id="@+id/weather"
+        android:layout_width="75sp"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/centigrade"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="3sp"
+        android:src="@drawable/weather_icon" />
+
+    <TextView
+        android:id="@+id/centigrade"
+        android:layout_width="75sp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/wind"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="10" />
+
+    <ImageView
+        android:id="@+id/wind"
+        android:layout_width="75sp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/warning"
+        android:background="@color/colorAccent"
+        android:src="@drawable/wind_icon" />
+
+    <ImageView
+        android:id="@+id/warning"
+        android:layout_width="75sp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:padding="3sp"
+        android:src="@drawable/warning_icon" />
+
+
+
+
+
+</RelativeLayout>

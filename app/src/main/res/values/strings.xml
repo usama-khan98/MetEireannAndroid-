@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MyMetEireannClone</string>
+
+    <string-array name="area_array">
+        <item>All counties</item>
+        <item>Carlow</item>
+        <item>Cavan</item>
+        <item>Clare</item>
+        <item>Cork</item>
+        <item>Donegal</item>
+        <item>Dublin</item>
+        <item>Galway</item>
+    </string-array>
+
+    <string-array name="level_array">
+        <item>Yellow Level</item>
+        <item>Red Level</item>
+    </string-array>
+
+    <string-array name="type_array">
+        <item>All</item>
+        <item>Rain</item>
+        <item>Wind</item>
+        <item>Fog</item>
+    </string-array>
+</resources>
