@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--NAME-->
+<!--STUDENT NUMBER-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_Weather_Details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/add_warning_header"
+        android:text="Add New Warning Subscription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent">
+
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/add_area_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/add_warning_header">
+
+        <EditText
+            android:id="@+id/enter_City_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter City Name"
+            android:inputType="textPersonName" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Empty"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/add_area_relative">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="5sp"
+            android:text="OR"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/get_location_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/Empty">
+
+        <Button
+            android:id="@+id/get_Location_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:background="@color/colorPrimary"
+            android:text="Get My Location"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp">
+        </Button>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/get_days_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/get_location_layout">
+
+        <EditText
+            android:id="@+id/add_days"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:hint="Enter Days">
+
+        </EditText>
+        <EditText
+            android:id="@+id/get_rain"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_below="@+id/add_days"
+            android:hint="Enter Rain Threshold">
+
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/get_rain_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/get_days_layout">
+
+        <EditText
+            android:id="@+id/add_rain_threshold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Rain Threshold">
+
+        </EditText>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/add_pref_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/get_rain_layout"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:text="ADD"
+        android:layout_margin="5sp"
+        android:textSize="15dp">
+    </Button>
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_pref_btn"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:text="CANCEL"
+        android:layout_margin="5sp"
+        android:textSize="15dp">
+    </Button>
+
+
+</RelativeLayout>

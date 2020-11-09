@@ -1,13 +1,17 @@
 package com.example.mymeteireannclone;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -24,13 +28,44 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView weatherRecycler;
     RecycleWeatherItemsAdapter recycleWeatherItemsAdapter;
     List<WeatherItem> weatherItemList=new ArrayList<>();
+    String longitute,latitute;
 
-    Button myWarningsBtn;
+    Button newPrefBtn,viewPrefBtn;
+    private PackageManager PackageManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        newPrefBtn=findViewById(R.id.Update_Pref_btn);
+        viewPrefBtn=findViewById(R.id.Delete_pref_btn);
+
+
+
+        try {
+            if (ContextCompat.checkSelfPermission(getApplicationContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
+                ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 101);
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        newPrefBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //navigation to next screen
+
+                startActivity(new Intent(getApplicationContext(),AddNewPreferencesActivity.class));
+            }
+        });
+
+        viewPrefBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ViewAllPreferences.class));
+            }
+        });
 
         weatherRecycler=findViewById(R.id.recycleview_weather);
 
@@ -57,15 +92,6 @@ public class MainActivity extends AppCompatActivity {
         //to update data displayed in recycler view
         recycleWeatherItemsAdapter.notifyDataSetChanged();
 
-
-        myWarningsBtn=findViewById(R.id.my_warnings_btn);
-
-        myWarningsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //navigation to next screen
-                startActivity(new Intent(getApplicationContext(),MyWarningsActivity.class));
-            }
-        });
     }
+
 }

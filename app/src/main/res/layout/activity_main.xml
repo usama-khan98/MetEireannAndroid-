@@ -62,16 +62,32 @@
     </androidx.recyclerview.widget.RecyclerView>
 
     <Button
-        android:id="@+id/my_warnings_btn"
+        android:id="@+id/Update_Pref_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/recycleview_weather"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
         android:background="@color/colorPrimary"
+        android:text="Add New Preferences"
         android:textColor="@color/colorAccent"
-        android:text="My Warnings "
-        android:layout_margin="5sp"
-        android:textSize="15dp">
-    </Button>
+        android:textSize="15dp"></Button>
+
+    <Button
+        android:id="@+id/Delete_pref_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Update_Pref_btn"
+        android:layout_marginStart="5sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginEnd="5sp"
+        android:layout_marginBottom="5sp"
+        android:background="@color/colorPrimary"
+        android:text="View All Preferences"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"></Button>
 
 
 

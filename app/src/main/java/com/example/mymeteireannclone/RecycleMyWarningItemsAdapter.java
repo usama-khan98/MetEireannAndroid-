@@ -67,7 +67,7 @@ public class RecycleMyWarningItemsAdapter extends RecyclerView.Adapter<RecycleMy
             @Override
             public void onClick(View v) {
                         //navigation to edit warnings activity for a weather item on selected position
-                    Intent myIntent=new Intent(mContext,EditMyWarningsActivity.class);
+                    Intent myIntent=new Intent(mContext,AddNewPreferencesActivity.class);
                     myIntent.putExtra("position",position);
                     mContext.startActivity(myIntent);
             }
@@ -94,7 +94,6 @@ public class RecycleMyWarningItemsAdapter extends RecyclerView.Adapter<RecycleMy
             type=itemView.findViewById(R.id.mywarning_type);
             level=itemView.findViewById(R.id.mywarning_level);
             editBtn=itemView.findViewById(R.id.edit_mywarning_btn);
-
 
         }
     }
